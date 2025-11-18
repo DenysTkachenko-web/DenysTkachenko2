@@ -1,0 +1,82 @@
+[
+  {
+    "model": "DJI Mini 4 Pro",
+    "camera": "4K/60fps HDR, 48MP",
+    "flight": "34 min",
+    "weight": "249 g",
+    "price": 759,
+    "rating": 4.5
+  },
+  {
+    "model": "DJI Air 3S",
+    "camera": "4K/60fps, 50MP (1-tuumainen sensori)",
+    "flight": "45 min",
+    "weight": "724 g",
+    "price": 1099,
+    "rating": 4.7
+  },
+  {
+    "model": "DJI Mavic 3 Pro",
+    "camera": "5.1K, kolmoiskamera",
+    "flight": "43 min",
+    "weight": "958 g",
+    "price": 2199,
+    "rating": 4.8
+  },
+  {
+    "model": "Autel EVO II Pro V3",
+    "camera": "6K, 1-tuumainen sensori",
+    "flight": "40 min",
+    "weight": "1191 g",
+    "price": 1999,
+    "rating": 4.5
+  },
+  {
+    "model": "DJI Mini 5 Pro",
+    "camera": "4K/60fps, 50MP (1-tuumainen sensori)",
+    "flight": "36 min",
+    "weight": "249.9 g",
+    "price": 750,
+    "rating": 4.6
+  },
+  {
+    "model": "DJI Flip",
+    "camera": "4K/60fps HDR, 48MP",
+    "flight": "31 min",
+    "weight": "249 g",
+    "price": 439,
+    "rating": 4.5
+  },
+  {
+    "model": "Autel EVO Nano+",
+    "camera": "4K/60fps, 50MP",
+    "flight": "28 min",
+    "weight": "249 g",
+    "price": 649,
+    "rating": 4.4
+  },
+  {
+    "model": "DJI Inspire 3",
+    "camera": "8K, täysikokoinen sensori",
+    "flight": "28 min",
+    "weight": "3950 g",
+    "price": 16499,
+    "rating": 4.9
+  },
+  {
+    "model": "Parrot Anafi Ai",
+    "camera": "4K/60fps HDR, 48MP",
+    "flight": "32 min",
+    "weight": "898 g",
+    "price": 3999,
+    "rating": 4.3
+  },
+  {
+    "model": "DJI Neo",
+    "camera": "4K/30fps, 12MP",
+    "flight": "27 min",
+    "weight": "135 g",
+    "price": 199,
+    "rating": 4.2
+  }
+]
