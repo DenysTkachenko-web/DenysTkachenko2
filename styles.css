@@ -1,0 +1,265 @@
+/* Minimal modern layout with UnifrakturCook for gothic elements + Inter sans-serif for readable body text (cold aesthetic preserved) */
+:root{
+  --bg:#0f1113;
+  --card:#0f1416;
+  --muted:#9aa1a6;
+  --accent:#bfa06a;
+  --glass: rgba(255,255,255,0.03);
+  --garland-wire: #ffffff; /* White for wires */
+  --branch-color: #228B22; /* Green for branches */
+  --ornament-colors: #ff0000, #00ff00, #0000ff, #ffff00, #ff00ff, #00ffff; /* Ornament colors */
+}
+
+* {box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: 'Inter', sans-serif; /* Readable sans-serif for body text */
+  background: linear-gradient(180deg, #0b0c0d 0%, #0f1113 100%);
+  color:#e6e7e8;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  letter-spacing:0.02em;
+  font-size: 1rem; /* Adjusted for better readability */
+}
+
+/* Gothic font for headers and accents */
+h1, h2, h3, .name, .model, .nav-btn, .logo-gothic {
+  font-family: 'UnifrakturCook', serif; /* Gothic Fraktur for cold, historical feel */
+  letter-spacing: 0.03em;
+}
+
+/* Topbar */
+.topbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+  padding:1rem 2rem;
+  position:sticky;
+  top:0;
+  backdrop-filter: blur(6px);
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+  z-index:10;
+}
+
+.logo{display:flex;align-items:center;gap:.6rem}
+.logo-gothic{
+  font-size:1.8rem;
+  line-height:1;
+  padding:.2rem .5rem;
+  border-radius:6px;
+  background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+  color:var(--accent);
+  box-shadow: 0 4px 18px rgba(0,0,0,0.6) inset;
+}
+.logo-text{font-weight:700; letter-spacing:.12em; color:var(--muted); font-size:0.95rem;}
+
+/* Nav buttons */
+.nav-btn{
+  background:none;
+  border:0;
+  color:var(--muted);
+  padding:.6rem .9rem;
+  font-weight:600;
+  cursor:pointer;
+  border-radius:8px;
+  transition: all 0.3s ease;
+}
+.nav-btn.active, .nav-btn:hover{
+  color: #fff;
+  background: var(--glass);
+  border: 1px solid rgba(255,255,255,0.03);
+  transform: scale(1.05);
+}
+
+/* Container */
+.container{max-width:1100px;margin:2rem auto;padding:0 1rem}
+.panel{display:none; opacity:0; transition: opacity 0.5s ease;}
+.panel.visible{display:block; opacity:1;}
+
+/* Card */
+.card{background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent); padding:1.6rem;border-radius:14px;box-shadow: 0 8px 30px rgba(0,0,0,0.6);border:1px solid rgba(255,255,255,0.03); backdrop-filter: blur(10px);}
+
+/* Resume */
+.resume .name{font-size:2.4rem;margin:.2rem 0 0}
+.resume .tagline{color:var(--muted);margin:.4rem 0 1rem;font-weight:500}
+
+.two-col{display:flex;gap:2rem;margin-top:1rem}
+.col{flex:1}
+.col.left{max-width:320px}
+.meta, .skills{list-style:none;padding:0;margin:0}
+.meta li{margin:.45rem 0;color:var(--muted)}
+.skills li{background:rgba(255,255,255,0.02);padding:.35rem .5rem;margin:.4rem 0;border-radius:8px;display:inline-block;color:#eaeaea; transition: transform 0.2s;}
+.skills li:hover{transform: translateX(5px);}
+
+/* CV CTA */
+.cv-cta{margin-top:1.4rem;text-align:right}
+.btn{display:inline-block;padding:.6rem 1rem;border-radius:10px;text-decoration:none;border:1px solid rgba(255,255,255,0.06);background:linear-gradient(180deg, rgba(191,160,106,0.08), transparent);color:var(--accent);font-weight:700; transition: all 0.3s;cursor:pointer;}
+.btn:hover{box-shadow: 0 0 15px rgba(191,160,106,0.3);}
+
+/* Drones section */
+.panel-header{margin-bottom:1rem}
+.lead{color:var(--muted)}
+.controls{display:flex;gap:.6rem;margin:1rem 0 1.2rem}
+.controls input, .controls select, .controls button{
+  padding:.6rem .8rem;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:var(--glass);color:inherit;outline:none; backdrop-filter: blur(5px); transition: border 0.3s;
+}
+.controls input:focus, .controls select:focus{border-color: var(--accent);}
+
+/* Add form */
+.add-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1.2rem;
+}
+.add-form input {
+  flex: 1 1 150px;
+  padding: .6rem .8rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.04);
+  background: var(--glass);
+  color: inherit;
+  outline: none;
+  backdrop-filter: blur(5px);
+}
+.add-form button {
+  padding: .6rem 1rem;
+  background: var(--accent);
+  color: #0f1113;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.add-form button:hover {
+  opacity: 0.9;
+}
+
+/* Cards grid */
+.cards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-bottom:1.4rem}
+.drone-card{padding:1rem;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);border:1px solid rgba(255,255,255,0.03);display:flex;flex-direction:column;gap:.6rem; transition: transform 0.3s;}
+.drone-card:hover{transform: translateY(-5px);}
+.model{font-weight:700;font-size:1.05rem}
+.specs{font-size:.9rem;color:var(--muted)}
+
+/* Delete button */
+.delete-btn {
+  padding: 0.4rem 0.8rem;
+  background: rgba(255, 0, 0, 0.2);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  transition: background 0.3s;
+}
+.delete-btn:hover {
+  background: rgba(255, 0, 0, 0.4);
+}
+
+/* Table */
+.table-wrap{overflow:auto;border-radius:10px; background:var(--glass); backdrop-filter: blur(10px);}
+table{width:100%;border-collapse:collapse;background:transparent}
+th, td{padding:.8rem .6rem;text-align:left;border-bottom:1px solid rgba(255,255,255,0.03);font-size:.95rem}
+th{color:var(--muted);font-weight:700; cursor:pointer;}
+th:hover{background: rgba(255,255,255,0.05);}
+
+/* Footer */
+.footer{text-align:center;padding:2rem 0;color:var(--muted);font-size:.85rem}
+
+/* Profile photo style */
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 2px solid var(--accent);
+}
+
+/* Advent calendar styles */
+.calendar-section {
+  position: relative; /* For corner branches */
+  padding: 2rem;
+  background: url('https://img.freepik.com/premium-vector/christmas-banner-with-gift-boxes-header-poster-website-vector-illustration_84749-4755.jpg') no-repeat center/cover; /* Christmas background */
+  background-blend-mode: overlay;
+  background-color: rgba(15,17,19,0.8); /* Dark overlay for readability */
+}
+.calendar-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Print styles for PDF export */
+@media print {
+  body {
+    background: white;
+    color: black;
+    font-family: 'Inter', sans-serif;
+  }
+  .site {
+    margin: 0;
+    padding: 0;
+  }
+  .topbar, #section-drones, #section-calendar, .footer, .add-form, .controls, .cards-grid {
+    display: none !important;
+  }
+  #section-about {
+    display: block !important;
+  }
+  .card {
+    box-shadow: none;
+    border: none;
+    background: white;
+    backdrop-filter: none;
+    padding: 0;
+  }
+  .two-col {
+    display: flex;
+    gap: 2rem;
+  }
+  .col.left {
+    max-width: 30%;
+  }
+  .col.right {
+    max-width: 70%;
+  }
+  .profile-photo {
+    border: 1px solid black;
+  }
+  .cv-cta {
+    display: none; /* Hide button in print */
+  }
+  a, button {
+    display: none;
+  }
+  /* Adjust colors for print */
+  h1, h2, h3, p, li, span {
+    color: black !important;
+  }
+  .tagline, .period, .muted {
+    color: gray !important;
+  }
+}
+
+/* Responsive tweaks */
+@media(max-width:900px){
+  .two-col{flex-direction:column}
+  .col.left{max-width:100%}
+  .controls{flex-direction:column;}
+  .add-form{flex-direction:column;}
+}
+
+/* Ornaments SVG */
+.ornaments-svg {
+  width: 100%;
+  height: 50px;
+  display: block;
+  background: transparent;
+}
