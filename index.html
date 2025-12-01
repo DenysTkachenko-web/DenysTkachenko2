@@ -17,8 +17,14 @@
       <nav class="nav">
         <button id="btn-about" class="nav-btn active">Minusta</button>
         <button id="btn-drones" class="nav-btn">Dronivertailu 2025</button>
+        <button id="btn-calendar" class="nav-btn">Joulukalenteri</button>
       </nav>
     </header>
+
+    <!-- SVG for hanging ornaments under header -->
+    <svg class="ornaments-svg" viewBox="0 0 1000 100" preserveAspectRatio="xMidYMid meet">
+      <!-- Ornaments will be added via JS -->
+    </svg>
 
     <main class="container">
       <section id="section-about" class="panel visible">
@@ -131,6 +137,16 @@
           </table>
         </div>
       </section>
+
+      <!-- Новый раздел: Joulukalenteri -->
+      <section id="section-calendar" class="panel calendar-section">
+        <header class="panel-header">
+          <h2>Joulukalenteri</h2>
+          <p class="lead">Joulukalenteri 2025: 24 päivää jouluun asti. Tänään korostettu päivä perustuu nykyiseen päivämäärään.</p>
+        </header>
+        <svg id="advent-calendar" class="calendar-svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid meet"></svg>
+      </section>
+
     </main>
 
     <footer class="footer">
