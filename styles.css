@@ -5,9 +5,12 @@
   --muted:#9aa1a6;
   --accent:#bfa06a;
   --glass: rgba(255,255,255,0.03);
+  --garland-wire: #ffffff; /* White for wires */
+  --branch-color: #228B22; /* Green for branches */
+  --ornament-colors: #ff0000, #00ff00, #0000ff, #ffff00, #ff00ff, #00ffff; /* Ornament colors */
 }
 
-*{box-sizing:border-box}
+* {box-sizing:border-box}
 html,body{height:100%}
 body{
   margin:0;
@@ -178,6 +181,21 @@ th:hover{background: rgba(255,255,255,0.05);}
   border: 2px solid var(--accent);
 }
 
+/* Advent calendar styles */
+.calendar-section {
+  position: relative; /* For corner branches */
+  padding: 2rem;
+  background: url('https://img.freepik.com/premium-vector/christmas-banner-with-gift-boxes-header-poster-website-vector-illustration_84749-4755.jpg') no-repeat center/cover; /* Christmas background */
+  background-blend-mode: overlay;
+  background-color: rgba(15,17,19,0.8); /* Dark overlay for readability */
+}
+.calendar-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
 /* Print styles for PDF export */
 @media print {
   body {
@@ -189,7 +207,7 @@ th:hover{background: rgba(255,255,255,0.05);}
     margin: 0;
     padding: 0;
   }
-  .topbar, #section-drones, .footer, .add-form, .controls, .cards-grid {
+  .topbar, #section-drones, #section-calendar, .footer, .add-form, .controls, .cards-grid {
     display: none !important;
   }
   #section-about {
@@ -236,4 +254,12 @@ th:hover{background: rgba(255,255,255,0.05);}
   .col.left{max-width:100%}
   .controls{flex-direction:column;}
   .add-form{flex-direction:column;}
+}
+
+/* Ornaments SVG */
+.ornaments-svg {
+  width: 100%;
+  height: 50px;
+  display: block;
+  background: transparent;
 }
